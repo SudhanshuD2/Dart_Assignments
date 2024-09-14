@@ -1,26 +1,14 @@
 import 'dart:io';
 
 void main(){
-  int size = int.parse(stdin.readLineSync()!);
-
-  for(int i=1; i<=size; i++){
-    int ctr = i;
-    for(int j=0; j<i; j++){
-      if(i%2==0){
-        if(ctr%2==0){
-          stdout.write('${ctr*ctr*ctr} ');
-        }else{
-          stdout.write('${ctr*ctr} ');
-        }
-      }else{
-        if(ctr%2==0){
-          stdout.write('${ctr*ctr} ');
-        }else{
-          stdout.write('${ctr*ctr*ctr} ');
-        }
+    stdout.write('Number of rows: ');
+    int num = int.parse(stdin.readLineSync()!);
+    for(int i=0; i<num; i++){
+      int x = i;
+      for(int j=0; j<=i; j++){
+        stdout.write('${x+1} ');
+        x+=(num-j);
       }
-      ctr++;
+      stdout.writeln();
     }
-    stdout.writeln();
-  }
 }

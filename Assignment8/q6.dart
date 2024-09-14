@@ -1,11 +1,13 @@
 import 'dart:io';
-void main() {
-  int i = 20;
-  while(i>=10){
-    if(i%2!=0){
-      stdout.write('${i*i} ');
+
+void main(){
+  int inp = int.parse(stdin.readLineSync()!);
+  int ctr = 0;
+  for(int i = 0; i<inp; i++){
+    for(int j=0; j<inp; j++){
+      ctr+=2;
+      stdout.write('$ctr ');
     }
-    i--;
+    stdout.writeln();
   }
-  stdout.writeln();
 }

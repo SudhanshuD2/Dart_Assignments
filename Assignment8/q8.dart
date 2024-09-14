@@ -1,12 +1,15 @@
-void main(){
-  int x = 10;
-  int prod = 1;
+import 'dart:io';
 
-  while(x>0){
-    if(x%2!=0){
-      prod*=x;
+void main(){
+  int inp = int.parse(stdin.readLineSync()!);
+  for(int i = 1; i<=inp; i++){
+    for(int j=0; j<inp; j++){
+      if(j==(inp-1)){
+        stdout.write('${i+1}');
+      }else{
+        stdout.write('$i ');
+      }
     }
-    x--;
+    stdout.writeln();
   }
-  print(prod);
 }

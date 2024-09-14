@@ -1,12 +1,13 @@
 import 'dart:io';
 
 void main(){
-  int size = int.parse(stdin.readLineSync()!);
+  int num = int.parse(stdin.readLineSync()!);
 
-  for(int i=1; i<=size; i++){
-    for(int j=0; j<i; j++){
-      stdout.write('C2W ');
+  for(int i = 1; i<=num; i++){
+    for(int j=1; j<=i; j++){
+      stdout.write(j);
     }
     stdout.writeln();
   }
+
 }

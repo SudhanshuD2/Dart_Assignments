@@ -1,24 +1,16 @@
 import 'dart:io';
 
 void main(){
-  int inp = int.parse(stdin.readLineSync()!);
+  stdout.write('Input 4: ');
+  int size = int.parse(stdin.readLineSync()!);  // 4
+  int ctr = 10;
 
-  for(int i = 0; i<inp; i++){
-    for(int j=0; j<inp; j++){
-      if(i%2==0){
-        if(j%2!=0){
-        stdout.write('1 ');
-        }else{
-          stdout.write('0 ');
-        }
-      }else{
-        if(j%2!=0){
-        stdout.write('0 ');
-        }else{
-          stdout.write('1 ');
-        }
-      }
+  for(int i=1; i<=size; i++){
+    for(int j=0; j<i; j++){
+      stdout.write('$ctr ');
+      ctr--;
     }
+    ctr++;
     stdout.writeln();
   }
 }
