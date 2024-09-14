@@ -5,11 +5,12 @@ void main(){
   int ctr = 1;
 
   for(int i=1; i<=row; i++){
-    for(int s=1; s<=(row-i); s++){
+    for(int sp=1; sp<=(row-i); sp++){
       stdout.write('  ');
     }
     for(int j=1; j<=i; j++){
-      stdout.write('${ctr++} ');
+      stdout.write('${ctr*ctr} ');
+      ctr++;
     }
     stdout.writeln();
   }

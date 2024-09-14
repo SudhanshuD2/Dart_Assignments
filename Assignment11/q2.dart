@@ -2,14 +2,14 @@ import 'dart:io';
 
 void main(){
   int row = int.parse(stdin.readLineSync()!);
-  int ctr = 1;
-
+  int k = 0;
   for(int i=1; i<=row; i++){
-    for(int s=1; s<=(row-i); s++){
+    for(int sp=0; sp<=(row-i);){
       stdout.write('  ');
+      k = sp++;
     }
     for(int j=1; j<=i; j++){
-      stdout.write('${ctr++} ');
+      stdout.write('${k+j} ');
     }
     stdout.writeln();
   }
