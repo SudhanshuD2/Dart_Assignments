@@ -6,7 +6,7 @@ void main(){
     ctr=i;
     for(int j=1; j<=row; j++){
       if(i%2==0){
-
+        stdout.write('$ctr');
       }
     }
     stdout.writeln();
